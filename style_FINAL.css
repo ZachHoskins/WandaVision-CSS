@@ -1,0 +1,198 @@
+:root {
+  --size: 50;
+  --unit: calc((var(--size) / 752) * 1vmin);
+
+  --red: #f11111;
+  --yellow: #f4f434;
+  --background: #000000;
+  --test: green;
+  background: var(--background);
+}
+
+.container {
+  height: calc(752 * var(--unit));
+  width: calc(620 * var(--unit));
+  position: fixed;
+
+  left: 50%;
+  top: 50%;
+  background: var(--background);
+  border: 12px solid var(--red);
+  transform: translate(-50%, -50%);
+}
+
+.mask {
+  position: relative;
+  background: var(--background);
+  height: 96%;
+  width: 92.6%;
+  left: 4%;
+  top: 0.8%;
+  overflow: hidden;
+}
+
+.mask-bottom {
+  position: absolute;
+  background: var(--red);
+  height: 75%;
+  width: 100%;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, 0%);
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+.mask-top {
+  position: absolute;
+  background: var(--red);
+  height: 70%;
+  width: 100%;
+  left: 0%;
+  top: -31%;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.cover-bottom-inside {
+  position: absolute;
+  background: var(--background);
+  height: 100%;
+  width: 64%;
+  left: 18%;
+  top: 1%;
+  border-radius: 36% 36% 50% 50%;
+}
+
+.cover-bottom-rect-1 {
+  position: absolute;
+  background: var(--background);
+  height: 40%;
+  width: 10%;
+  left: 18.6%;
+  top: 2%;
+  border-radius: 40%;
+  transform: rotate(5deg);
+}
+
+.cover-bottom-rect-2 {
+  position: absolute;
+  background: var(--background);
+  height: 40%;
+  width: 10%;
+  right: 18.6%;
+  top: 2%;
+  border-radius: 40%;
+  transform: rotate(-5deg);
+}
+
+.cover-bottom-rect-3 {
+  position: absolute;
+  background: var(--background);
+  height: 7%;
+  width: 7%;
+  right: 25%;
+  top: 83%;
+  transform: rotate(-10deg);
+}
+
+.cover-bottom-rect-4 {
+  position: absolute;
+  background: var(--background);
+  height: 7%;
+  width: 7%;
+  left: 25%;
+  top: 83%;
+  transform: rotate(10deg);
+}
+
+.cover-bottom-trap {
+  position: absolute;
+  background: var(--background);
+  height: 7%;
+  width: 52%;
+  left: 24%;
+  top: 83%;
+  clip-path: polygon(3% 0%, 97% 0%, 100% 100%, 0% 100%);
+}
+
+.inside-left-rect {
+  position: absolute;
+  background: var(--red);
+  height: 20%;
+  width: 30%;
+  left: 20.3%;
+  top: 32%;
+  transform: skewY(42deg);
+}
+
+.inside-right-rect {
+  position: absolute;
+  background: var(--red);
+  height: 20%;
+  width: 30%;
+  right: 20.3%;
+  top: 32%;
+  transform: skewY(-42deg);
+}
+
+.top-inside-left {
+  position: absolute;
+  background: var(--background);
+  height: 21%;
+  width: 70%;
+  left: -6%;
+  top: 58%;
+  border-radius: 50%;
+  transform: rotate(55deg);
+}
+
+.top-inside-right {
+  position: absolute;
+  background: var(--background);
+  height: 21%;
+  width: 70%;
+  right: -6%;
+  top: 58%;
+  border-radius: 50%;
+  transform: rotate(-55deg);
+}
+
+.top-inside-center {
+  position: absolute;
+  background: var(--background);
+  height: 60%;
+  width: 70%;
+  left: 15%;
+  top: 41%;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.stone-top {
+  position: absolute;
+  overflow: hidden;
+  background: var(--background);
+  height: 10%;
+  width: 11.6%;
+  left: 44.4%;
+  top: 9.5%;
+}
+
+.stone-point {
+  position: absolute;
+  background: var(--yellow);
+  height: 167%;
+  width: 173%;
+  left: -36%;
+  top: 34%;
+  border-radius: 0 100% 0 100%;
+  transform: rotate(45deg);
+}
+
+.stone-bottom {
+  position: absolute;
+  background: var(--yellow);
+  height: 6%;
+  width: 11.5%;
+  left: 44.5%;
+  top: 18.7%;
+  border-radius: 0% 0% 100px 100px;
+}
